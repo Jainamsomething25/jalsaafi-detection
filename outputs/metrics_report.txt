@@ -1,0 +1,24 @@
+=== JalSaafi Oil-Spill Detector - Test Set Evaluation ===
+Checkpoint: epoch 7 (best val balanced accuracy during training: 0.969)
+NOTE: training was manually stopped after epoch 8/15 (user time constraint), using early-stop patience 5 with a max of 15 epochs. Epoch 7 was the last epoch that improved validation balanced accuracy, so it is the saved checkpoint.
+Test set size: 831
+Overall accuracy: 0.957
+Balanced accuracy: 0.951
+ROC-AUC: 0.987
+
+Per-class precision/recall/F1:
+              precision    recall  f1-score   support
+
+      no_oil      0.968     0.968     0.968       554
+         oil      0.935     0.935     0.935       277
+
+    accuracy                          0.957       831
+   macro avg      0.951     0.951     0.951       831
+weighted avg      0.957     0.957     0.957       831
+
+Confusion matrix (rows=actual, cols=predicted):
+  ['no_oil', 'oil']
+[[536  18]
+ [ 18 259]]
+
+NOTE: this is a proof-of-concept classifier trained on a limited dataset. SAR oil-spill detection is known to be confounded by 'look-alikes' (low wind zones, algae films, wave shadows) that mimic oil's dark radar signature. Metrics above reflect performance on this dataset only and should not be read as real-world accuracy.

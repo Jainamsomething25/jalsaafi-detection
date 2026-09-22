@@ -1,0 +1,15 @@
+venv/
+__pycache__/
+*.pyc
+outputs/dataset_inspection_report.txt
+
+# Split CSVs hold absolute local paths; regenerate with scripts/prepare_splits.py
+data/splits/*.csv
+
+# Trained weights not yet committed (from Google Drive, or regenerated via
+# scripts/train.py). Add explicitly with `git add -f` once placed here.
+models/*.pt
+models/*.pth
+
+# Unrelated staging folder for website assets (not part of this ML project).
+Photos for website/
